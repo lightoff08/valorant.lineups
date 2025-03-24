@@ -6,13 +6,6 @@
 }
 
 body {
-    background-color: #121212; /* 深色背景 */
-    color: #f1f1f1;
-    font-family: "Arial", sans-serif;
-    margin: 0;
-}
-
-body {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('iconbg\\sovabg.webp') no-repeat center center fixed;
     background-size: cover;
     font-family: "Arial", sans-serif;
@@ -37,7 +30,6 @@ main {
     padding: 20px;
 }
 
-/* 資料夾卡片列表 */
 .folder-list {
     display: flex;
     flex-wrap: wrap;
@@ -45,7 +37,6 @@ main {
     justify-content: center;
 }
 
-/* 每個資料夾卡片 */
 .folder-card {
     background-color: #002649;
     border-radius: 8px;
@@ -73,9 +64,9 @@ main {
     color: #fff;
 }
 
-/* 3. 詳細內容視窗 (Modal) */
+/* 3. 彈窗優化 */
 .detail-modal {
-    display: none; /* 初始隱藏 */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -88,91 +79,132 @@ main {
 }
 
 .detail-modal.show {
-    display: flex; /* 顯示為彈窗 */
+    display: flex;
 }
 
-/* Modal 詳細內容視窗 */
 .detail-content {
     display: flex;
-    width: 80%;
-    max-height: 80%;
+    width: 90%;
+    height: 80vh; /* 降低高度避免壓迫感 */
+    max-width: 1400px; /* 限制最大寬度 */
     background-color: #1e1e1e;
     border-radius: 8px;
     overflow: hidden;
 }
 
-/* 關閉按鈕 */
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    color: #fff;
-    font-size: 32px;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 2;
-}
-/* 左側：圖片區，設定 16:9 比例 */
+/* 圖片區 - 嚴格 16:9 比例 */
 .detail-left {
-    width: 55%; /* 可依需求調整比例 */
+    flex: 7; /* 7:3 比例 */
     position: relative;
-    aspect-ratio: 16 / 9; /* 現代瀏覽器支援 */
     background-color: #000;
     overflow: hidden;
 }
 
+.detail-left::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%; /* 16:9 比例 (9/16=56.25%) */
+}
+
 .detail-left img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; /* 完整顯示不裁剪 */
+    background: #000; /* 填充黑邊 */
 }
 
-
-/* 左右箭頭按鈕 */
-.nav-btn {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    border: none;
-    font-size: 36px;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: background-color 0.3s;
-    z-index: 1;
-}
-
-.nav-btn:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.prev-btn {
-    left: 10px;
-}
-
-.next-btn {
-    right: 10px;
-}
-
+/* 文字區 */
 .detail-right {
-    width: 45%; /* 右側區域 */
-    padding: 20px;
+    flex: 3;
+    padding: 25px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
 .detail-right h2 {
-    margin-top: 0;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color: #f1f1f1;
+    margin-bottom: 10px;
 }
 
 .detail-right p {
     color: #ccc;
-    line-height: 1.5;
-    font-size: 0.95rem;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* 按鈕調整 */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #fff;
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.nav-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    padding: 12px 18px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s;
+    opacity: 0.8;
+}
+
+.nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 1;
+}
+
+.prev-btn {
+    left: 15px;
+}
+
+.next-btn {
+    right: 15px;
+}
+
+/* 手機版響應式 */
+@media (max-width: 768px) {
+    .detail-content {
+        flex-direction: column;
+        height: 90vh;
+        width: 95%;
+    }
+
+    .detail-left {
+        width: 100%;
+        flex: none;
+        height: 60vh;
+    }
+
+    .detail-left::before {
+        padding-top: 56.25%;
+    }
+
+    .detail-right {
+        width: 100%;
+        flex: none;
+        height: 30vh;
+        padding: 15px;
+    }
+
+    .nav-btn {
+        font-size: 24px;
+        padding: 8px 12px;
+    }
 }
