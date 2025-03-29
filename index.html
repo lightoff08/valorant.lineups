@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Valorant Sova Lineups</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/vnd.icon" href="iconbg\sovaicon.ico">
+</head>
+<body>
+    <header>
+        <h1>Valorant Sova Lineups</h1>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="about.html" id="about-link">關於本站</a></li>
+                <li><a href="source.html" id="source-link">來源</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- 資料夾列表區 -->
+        <div class="folder-list">
+            <!-- 每個 .folder-card 代表一個「資料夾」 -->
+            <!-- data-folder 用於標示此資料夾的索引（對應 scripts.js 中的 folderData 陣列） -->
+            <div class="folder-card" data-folder="0">
+                <img src="images\Fracture A-main door\img4.png" alt="Folder 1" />
+                <h3>Fracture A-main door to A side</h3>
+            </div>
+            <div class="folder-card" data-folder="1">
+                <img src="images\Fracture CT to A Drop\img4.png" alt="Folder 2" />
+                <h3>Fracture CT to A Drop</h3>
+            </div>
+            <div class="folder-card" data-folder="2">
+                <img src="images\Fracture Tower to B main\img4.png" alt="Folder 3" />
+                <h3>Fracture Tower to B main</h3>
+            </div>        
+            <div class="folder-card" data-folder="3">
+                <img src="images\Fracture A drop to T\img4.png" alt="Folder 4" />
+                <h3>Fracture A drop to T</h3>
+            </div>
+            <div class="folder-card" data-folder="4">
+                <img src="images\A side to A drop\img4.png" alt="Folder 5" />
+                <h3>A side to A drop</h3>
+            </div>   
+            <div class="folder-card" data-folder="5">
+                <img src="images\B CT to A side\img4.png" alt="Folder 6" />
+                <h3>B CT to A side</h3>
+            </div>   
+            <div class="folder-card" data-folder="6">
+                <img src="images\A CT to B side\img4.png" alt="Folder 7" />
+                <h3>A CT to B side</h3>
+            </div> 
+            <div class="folder-card" data-folder="7">
+                <img src="images\B under tower to B CT\img4.png" alt="Folder 8" />
+                <h3>B under tower to B CT</h3>
+            </div> 
+            <div class="folder-card" data-folder="8">
+                <img src="images\B side to B main\img4.png" alt="Folder 9" />
+                <h3>B side to B main</h3>
+            </div> 
+            <div class="folder-card" data-folder="9">
+                <img src="images\B main to A side\img4.png" alt="Folder 10" />
+                <h3>B main to A side</h3>
+            </div> 
+            <div class="folder-card" data-folder="10">
+                <img src="images\B tower to A drop top\img4.png" alt="Folder 11" />
+                <h3>B tower to A drop top</h3>
+            </div> 
+            <div class="folder-card" data-folder="11">
+                <img src="images\T (other size) to B side\img4.png" alt="Folder 12" />
+                <h3>T (other size) to B side</h3>
+            </div> 
+            <div class="folder-card" data-folder="12">
+                <img src="images\B main to under tower hall\img4.png" alt="Folder 13" />
+                <h3>B main to under tower hall</h3>
+            </div> 
+            <div class="folder-card" data-folder="13">
+                <img src="images\B main to B (other size)\img4.png" alt="Folder 14" />
+                <h3>B main to B (other size)</h3>
+            </div> 
+            <div class="folder-card" data-folder="14">
+                <img src="images\T (other size) to B  main\img4.png" alt="Folder 15" />
+                <h3>T (other size) to B  main</h3>
+            </div> 
+            <div class="folder-card" data-folder="15">
+                <img src="images\B tower under to A drop under\img4.png" alt="Folder 16" />
+                <h3>B tower under to A drop under </h3>
+            </div> 
+            <div class="folder-card" data-folder="16">
+                <img src="images\B CT to B main (other size)\img4.png" alt="Folder 17" />
+                <h3>B CT to B main (other size)</h3>
+            </div> 
+            <div class="folder-card" data-folder="17">
+                <img src="images\B main to A T(other size)\img4.png" alt="Folder 18" />
+                <h3>B main to A T(other size)</h3>
+            </div> 
+            <div class="folder-card" data-folder="18">
+                <img src="images\A drop to A CT\img4.png" alt="Folder 19" />
+                <h3>A drop to A CT</h3>
+            </div> 
+            <div class="folder-card" data-folder="19">
+                <img src="images\CT to B main\img4.png" alt="Folder 20" />
+                <h3>CT to B main</h3>
+            </div> 
+            <div class="folder-card" data-folder="20">
+                <img src="images\A T(other size) to A Tower\img4.png" alt="Folder 21" />
+                <h3>A T(other size) to A Tower</h3>
+            </div> 
+            <!-- 如果有更多資料夾，可繼續新增 -->
+        </div>
+    </main>
+
+    <!-- Modal：顯示某一資料夾內的圖片輪播 -->
+    <div class="detail-modal" id="detail-modal">
+        <div class="detail-content">
+            <span class="close-btn" id="close-btn">&times;</span>
+
+            <!-- 左側：大圖 + 前後箭頭 -->
+            <div class="detail-left">
+                <button class="nav-btn prev-btn" id="prev-btn">&#10094;</button>
+                <img id="detail-image" src="" alt="Detail" />
+                <button class="nav-btn next-btn" id="next-btn">&#10095;</button>
+            </div>
+
+            <!-- 右側：標題、描述 -->
+            <div class="detail-right">
+                <h2 id="detail-title">圖片標題</h2>
+                <p id="detail-desc">圖片描述</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

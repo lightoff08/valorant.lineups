@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>Sova箭矢軌跡教學平台解析</title>
+    <style>
+        /* 深色電競風格 */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: #1a1a1a;
+            color: #e0e0e0;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* 右上角導航 */
+        .nav {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+        .nav a {
+            color: #7f8c8d;
+            text-decoration: none;
+            border: 2px solid #34495e;
+            padding: 8px 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .nav a:hover {
+            background: #00ff9d22;
+        }
+
+        /* 平台特色區塊 */
+        .feature-section {
+            margin-top: 60px;
+        }
+
+        /* 互動卡片設計 */
+        .card {
+            background: #2d2d2d;
+            border-radius: 10px;
+            padding: 25px;
+            border: 1px solid #34495e;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            margin-bottom: 30px;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            transition: 0.3s;
+        }
+
+        /* 步驟教學視覺化 */
+        .step-guide {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .step-number {
+            background: #7f8c8d;
+            color: #1a1a1a;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        /* 地圖定位標示 */
+        .map-marker {
+            color: #7f8c8d;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-left: 3px solid;
+            margin: 10px 0;
+        }
+
+        /* 作者資訊 */
+        .author {
+            text-align: right;
+            color: #7f8c8d;
+            margin-top: 15px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="index.html">首頁</a>
+    </nav>
+
+    <div class="feature-section">
+        <h1 style="color: #7f8c8d; text-align: center;">Sova箭矢軌跡教學平台解析</h1>
+
+        <div class="card">
+            <h2>核心功能特色</h2>
+            <div class="map-marker">Fracture 全圖覆蓋</div>
+            <p>針對A/B站點設計CT與T方進攻/防守箭矢軌道，包含：</p>
+            <ul>
+                <li>20+個基礎站位點位</li>
+                <li>鏡頭瞄準輔助線顯示</li>
+                <li>蓄力秒數精確到0.5秒單位</li>
+            </ul>
+
+            <div class="step-guide">
+                <div class="step-number">1</div>
+                <div>
+                    <h3>直覺式四步驟教學</h3>
+                    <p>站位 → 瞄準 → 參數設定 → 落點預覽</p>
+                </div>
+            </div>
+            
+            <div class="author">作者: LightOFF</div>
+        </div>
+    </div>
+</body>
+</html>
