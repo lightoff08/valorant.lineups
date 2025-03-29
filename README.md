@@ -1,4 +1,11 @@
-This website is just saved some Sova lineups for myself. 
-The Lineup pictures come from this Bilibili channel https://space.bilibili.com/383904476 
-我沒有版權 如果作者想要我刪掉的話 我會刪掉的, 謝謝 
-聯繫: Discord : lightoff_lo的
+蘇法Lineup記錄站
+本站為個人遊戲陣容記錄工具，所有引用遊戲畫面與內容版權均歸原作者所有。
+
+版權聲明
+• 本站所有遊戲畫面素材均取自B站UP主 383904476 https://space.bilibili.com/383904476
+• 純屬個人學習記錄用途，非商業性質
+• 尊重原創版權，如有任何版權問題請立即聯繫
+
+聯繫方式
+Discord: lightoff_lo
+收到原作者要求後將在48小時內關閉整個網站
